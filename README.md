@@ -24,10 +24,10 @@ With that simple fact, combined with the way that HTML forms behave when submitt
 
 Wire up the following 4 RCAVs and add `<h1>` elements to each that say "Addition", "Subtraction", "Multiplication", and "Division":
 
- - `/add`
- - `/subtract`
- - `/multiply`
- - `/divide`
+ - `/wizard_add`
+ - `/wizard_subtract`
+ - `/wizard_multiply`
+ - `/wizard_divide`
 
 Use the [slides](https://slides.com/raghubetina/07-routing?token=Qj5aA5z3), [chapter](https://chapters.firstdraft.com/chapters/779), and your RPS RCAV workspace as a reference.
 
@@ -39,7 +39,7 @@ Visit your `/wizard_add` URL, but type a query string on to the end: `?first_num
 /wizard_add?first_num=3&second_num=4
 ```
 
-First pull up the Terminal tab running your server and Cmd-K or Ctrl-K to clear it out, then visit that URL again. Scroll to the top of the Terminal tab. Read the log — what do you notice?
+First pull up the Terminal tab running your server and [Cmd-K or Ctrl-K to clear it out](https://chapters.firstdraft.com/chapters/834#clear-terminal), then visit that URL again. Scroll to the top of the Terminal tab. Read the log — what do you notice?
 
 The `params` Parameters `Hash`! Use the `params` hash in the action you defined to calculate a result and display it in the view template you created. Make the markup [match the target](https://omnicalc-2.matchthetarget.com/wizard_add?first_num=3&second_num=4).
 
@@ -57,7 +57,9 @@ Now, make it easier on your users. They should not have to type into the address
 
 Can you invent a way to make it easier for them using what you've learned about RCAV, `params`, and what we reverse-engineered about how HTML forms work?
 
-## Intro to APIs
+Try making a page appear at the URL `/add`. Add a form to it that takes users to `/wizard_add` with the appropriate query string on the end.
+
+## Using APIs within actions
 
 Some handy links:
 
