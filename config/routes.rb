@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
 
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  get("/substract", {:controller=> "math", :action=> "minus"})
+  get("/wizard_substract", {:controller=> "math", :action=> "minus_results"})
+
+  get("/multiply", {:controller =>"math", :action => "times"})
+  get("/wizard_multiply", {:controller =>"math", :action => "times_results"})
+
+  get("/divide", {:controller =>"math", :action => "divide"})
+  get("/wizard_divide", {:controller =>"math", :action => "divide_results"})
+
+
+
 end
